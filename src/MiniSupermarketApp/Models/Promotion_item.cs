@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MiniSupermarketApp.DTO
+namespace MiniSupermarketApp.Models
 {
-    internal class AccountDTO
+    internal class Promotion_item
     {
     }
 }

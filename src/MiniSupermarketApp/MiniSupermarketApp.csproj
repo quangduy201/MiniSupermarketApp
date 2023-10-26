@@ -118,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main\MiniSupermarketApp.cs" />
+    <Compile Include="Models\Brand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\LoginView\LoginView.cs">
       <SubType>Form</SubType>
@@ -153,7 +154,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />
-    <Folder Include="Models\" />
     <Folder Include="Presenters\" />
     <Folder Include="Resources\Images\Banners\" />
     <Folder Include="Resources\Images\Products\" />
