@@ -6,21 +6,19 @@ using System.Threading.Tasks;
 
 namespace MiniSupermarketApp.Models
 {
-    class Module
+    public class Module
     {
         int id;
         string name;
-        bool deleted;
 
         public Module()
         {
         }
 
-        public Module(int id, string name, bool deleted)
+        public Module(int id, string name)
         {
             this.id = id;
             this.name = name;
-            this.deleted = deleted;
         }
 
         public int Id
@@ -33,12 +31,6 @@ namespace MiniSupermarketApp.Models
         {
             get { return name; }
             set { name = value; }
-        }
-
-        public bool Deleted
-        {
-            get { return deleted; }
-            set { deleted = value; }
         }
 
         public override string ToString()

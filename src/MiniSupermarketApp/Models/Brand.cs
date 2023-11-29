@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace MiniSupermarketApp.Models
 {
-    class Brand
+    public class Brand
     {
         int id;
         string name;
         int supplier_id;
-        bool deleted;
+        Boolean deleted;
 
         public Brand()
         {
         }
 
-        public Brand(int id, string name, int supplier_id, bool deleted)
+        public Brand(int id, string name, int supplier_id, Boolean deleted)
         {
             this.id = id;
             this.name = name;
@@ -43,7 +43,7 @@ namespace MiniSupermarketApp.Models
             set { supplier_id = value; }
         }
 
-        public bool Deleted
+        public Boolean Deleted
         {
             get { return deleted;}
             set { deleted = value; }

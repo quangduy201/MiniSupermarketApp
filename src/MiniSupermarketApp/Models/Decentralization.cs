@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiniSupermarketApp.Models
 {
-    class Decentralization
+    public class Decentralization
     {
         int role_id;
         int module_id;

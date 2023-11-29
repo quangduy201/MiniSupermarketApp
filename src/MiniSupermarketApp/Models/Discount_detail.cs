@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace MiniSupermarketApp.Models
 {
-    class Discount_detail
+    public class Discount_detail
     {
         int discount_id;
         int product_id;
-        bool status;
+        Boolean status;
 
         public Discount_detail()
         {
         }
 
-        public Discount_detail(int discount_id, int product_id, bool status)
+        public Discount_detail(int discount_id, int product_id, Boolean status)
         {
             this.discount_id = discount_id;
             this.product_id = product_id;
@@ -35,7 +35,7 @@ namespace MiniSupermarketApp.Models
             set { product_id = value; }
         }
 
-        public bool Status
+        public Boolean Status
         {
             get { return status; }
             set { status = value; }

@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace MiniSupermarketApp.Models
 {
-    class Role
+    public class Role
     {
         int id;
         string name;
-        bool deleted;
+        Boolean deleted;
 
         public Role()
         {
         }
 
-        public Role(int id, string name, bool deleted)
+        public Role(int id, string name, Boolean deleted)
         {
             this.id = id;
             this.name = name;
@@ -35,7 +35,7 @@ namespace MiniSupermarketApp.Models
             set { name = value; }
         }
 
-        public bool Deleted
+        public Boolean Deleted
         {
             get { return deleted; }
             set { deleted = value; }

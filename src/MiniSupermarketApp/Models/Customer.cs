@@ -11,18 +11,17 @@ namespace MiniSupermarketApp.Models
         int id;
         string name;
         bool gender;
-        Date birthday;
+        DateTime birthday;
         string phone;
         bool membership;
-        Date signed_up_date;
-        int point;
+        DateTime signed_up_DateTime;
         bool deleted;
 
         public Customer()
         {
         }
 
-        public Customer(int id, string name, bool gender, Date birthday, string phone, bool membership, Date signed_up_date, int point, bool deleted)
+        public Customer(int id, string name, bool gender, DateTime birthday, string phone, bool membership, DateTime signed_up_DateTime, int point, bool deleted)
         {
             this.id = id;
             this.name = name;
@@ -30,7 +29,7 @@ namespace MiniSupermarketApp.Models
             this.birthday = birthday;
             this.phone = phone;
             this.membership = membership;
-            this.signed_up_date = signed_up_date;
+            this.signed_up_DateTime = signed_up_DateTime;
             this.point = point;
             this.deleted = deleted;
         }
@@ -53,7 +52,7 @@ namespace MiniSupermarketApp.Models
             set { gender = value; }
         }
 
-        public Date Birthday
+        public DateTime Birthday
         {
             get { return birthday; }
             set { birthday = value; }
@@ -71,10 +70,10 @@ namespace MiniSupermarketApp.Models
             set { membership = value; }
         }
 
-        public Date Signed_up_date
+        public DateTime Signed_up_DateTime
         {
-            get { return signed_up_date; }
-            set { signed_up_date = value;}
+            get { return signed_up_DateTime; }
+            set { signed_up_DateTime = value;}
         }
 
         public int Point
@@ -99,7 +98,7 @@ namespace MiniSupermarketApp.Models
                 birthday + " | " +
                 phone + " | " +
                 membership1 + " | " +
-                signed_up_date + " | " +
+                signed_up_DateTime + " | " +
                 point;
         }
     }

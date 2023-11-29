@@ -6,25 +6,23 @@ using System.Threading.Tasks;
 
 namespace MiniSupermarketApp.Models
 {
-    class Promotion
+    public class Promotion
     {
         int id;
-        Date start_date;
-        Date end_date;
-        bool status;
-        bool deleted;
+        DateTime start_DateTime;
+        DateTime end_DateTime;
+        Boolean status;
 
         public Promotion()
         {
         }
 
-        public Promotion(int id, Date start_date, Date end_date, bool status, bool deleted)
+        public Promotion(int id, DateTime start_DateTime, DateTime end_DateTime, Boolean status)
         {
             this.id = id;
-            this.start_date = start_date;
-            this.end_date = end_date;
+            this.start_DateTime = start_DateTime;
+            this.end_DateTime = end_DateTime;
             this.status = status;
-            this.deleted = deleted;
         }
 
         public int Id
@@ -33,36 +31,30 @@ namespace MiniSupermarketApp.Models
             set { id = value; }
         }
 
-        public Date Start_date
+        public DateTime Start_DateTime
         {
-            get { return start_date; }
-            set { start_date = value; }
+            get { return start_DateTime; }
+            set { start_DateTime = value; }
         }
 
-        public Date End_date
+        public DateTime End_DateTime
         {
-            get { return end_date; }
-            set { end_date = value; }
+            get { return end_DateTime; }
+            set { end_DateTime = value; }
         }
 
-        public bool Status
+        public Boolean Status
         {
             get { return status; }
             set { status = value; }
-        }
-
-        public bool Deleted
-        {
-            get { return deleted; }
-            set { deleted = value; }
         }
 
         public override string ToString()
         {
             string status1 = status ? "Ngưng áp dụng" : "Đang áp dụng";
             return id + " | " +
-                start_date + " | " +
-                end_date + " | " +
+                start_DateTime + " | " +
+                end_DateTime + " | " +
                 status1;
         }
     }

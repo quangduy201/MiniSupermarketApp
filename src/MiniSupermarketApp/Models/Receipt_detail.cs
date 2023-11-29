@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiniSupermarketApp.Models
 {
-    class Receipt_detail
+    public class Receipt_detail
     {
         int receipt_id;
         int product_id;

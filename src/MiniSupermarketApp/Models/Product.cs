@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiniSupermarketApp.Models
 {
-    class Product
+    public class Product
     {
         int id;
         string name;
@@ -17,13 +17,13 @@ namespace MiniSupermarketApp.Models
         double quantity;
         string image;
         string barcode;
-        bool deleted;
+        Boolean deleted;
 
         public Product()
         {
         }
 
-        public Product(int id, string name, int brand_id, int category_id, string unit, double cost, double quantity, string image, string barcode, bool deleted)
+        public Product(int id, string name, int brand_id, int category_id, string unit, double cost, double quantity, string image, string barcode, Boolean deleted)
         {
             this.id = id;
             this.name = name;
@@ -91,7 +91,7 @@ namespace MiniSupermarketApp.Models
             set { barcode = value; }
         }
 
-        public bool Deleted
+        public Boolean Deleted
         {
             get { return deleted;}
             set { deleted = value; }

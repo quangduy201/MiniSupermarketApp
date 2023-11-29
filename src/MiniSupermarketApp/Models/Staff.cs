@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace MiniSupermarketApp.Models
 {
-    class Staff
+    public class Staff
     {
         int id;
         string name;
-        bool gender;
-        Date birthday;
+        Boolean gender;
+        DateTime birthday;
         string phone;
         string address;
         string email;
-        Date entry_date;
-        bool deleted;
+        DateTime entry_DateTime;
+        Boolean deleted;
 
         public Staff()
         {
         }
 
-        public Staff(int id, string name, bool gender, Date birthday, string phone, string address, string email, Date entry_date, bool deleted)
+        public Staff(int id, string name, Boolean gender, DateTime birthday, string phone, string address, string email, DateTime entry_DateTime, Boolean deleted)
         {
             this.id = id;
             this.name = name;
@@ -31,7 +31,7 @@ namespace MiniSupermarketApp.Models
             this.phone = phone;
             this.address = address;
             this.email = email;
-            this.entry_date = entry_date;
+            this.entry_DateTime = entry_DateTime;
             this.deleted = deleted;
         }
 
@@ -47,13 +47,13 @@ namespace MiniSupermarketApp.Models
             set { name = value; }
         }
 
-        public bool Gender
+        public Boolean Gender
         {
             get { return gender; }
             set { gender = value; }
         }
 
-        public Date Birthday
+        public DateTime Birthday
         {
             get { return birthday; }
             set { birthday = value; }
@@ -77,13 +77,13 @@ namespace MiniSupermarketApp.Models
             set { email = value; }
         }
 
-        public Date Entry_date
+        public DateTime Entry_DateTime
         {
-            get { return entry_date; }
-            set { entry_date = value; }
+            get { return entry_DateTime; }
+            set { entry_DateTime = value; }
         }
 
-        public bool Deleted
+        public Boolean Deleted
         {
             get { return deleted; }
             set { deleted = value; }
@@ -98,7 +98,7 @@ namespace MiniSupermarketApp.Models
                 phone + " | " +
                 address + " | " +
                 email + " | " +
-                entry_date;
+                entry_DateTime;
         }
     }
 }

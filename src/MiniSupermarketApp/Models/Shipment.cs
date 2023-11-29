@@ -6,24 +6,23 @@ using System.Threading.Tasks;
 
 namespace MiniSupermarketApp.Models
 {
-    class Shipment
+    public class Shipment
     {
         int id;
         int product_id;
         double unit_price;
         double quantity;
         double remain;
-        Date mfg;
-        Date exp;
+        DateTime mfg;
+        DateTime exp;
         string sku;
         int import_id;
-        bool deleted;
 
         public Shipment()
         {
         }
 
-        public Shipment(int id, int product_id, double unit_price, double quantity, double remain, Date mfg, Date exp, string sku, int import_id, bool deleted)
+        public Shipment(int id, int product_id, double unit_price, double quantity, double remain, DateTime mfg, DateTime exp, string sku, int import_id)
         {
             this.id = id;
             this.product_id = product_id;
@@ -34,7 +33,6 @@ namespace MiniSupermarketApp.Models
             this.exp = exp;
             this.sku = sku;
             this.import_id = import_id;
-            this.deleted = deleted;
         }
 
         public int Id
@@ -67,13 +65,13 @@ namespace MiniSupermarketApp.Models
             set { remain = value; }
         }
 
-        public Date Mfg
+        public DateTime Mfg
         {
             get { return mfg;}
             set { mfg = value; }
         }
 
-        public Date Exp
+        public DateTime Exp
         {
             get { return exp; }
             set { exp = value; }
@@ -89,12 +87,6 @@ namespace MiniSupermarketApp.Models
         {
             get { return import_id;}
             set { import_id = value; }
-        }
-
-        public bool Deleted
-        {
-            get { return deleted;}
-            set { deleted = value; }
         }
 
         public override string ToString()

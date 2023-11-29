@@ -6,27 +6,25 @@ using System.Threading.Tasks;
 
 namespace MiniSupermarketApp.Models
 {
-    class Export
+    public class Export
     {
         int id;
         int staff_id;
-        Date invoice_date;
+        DateTime invoice_DateTime;
         double total;
         string reason;
-        bool deleted;
 
         public Export()
         {
         }
 
-        public Export(int id, int staff_id, Date invoice_date, double total, string reason, bool deleted)
+        public Export(int id, int staff_id, DateTime invoice_DateTime, double total, string reason)
         {
             this.id = id;
             this.staff_id = staff_id;
-            this.invoice_date = invoice_date;
+            this.invoice_DateTime = invoice_DateTime;
             this.total = total;
             this.reason = reason;
-            this.deleted = deleted;
         }
 
         public int Id
@@ -41,10 +39,10 @@ namespace MiniSupermarketApp.Models
             set { staff_id = value; }
         }
 
-        public Date Invoice_date
+        public DateTime Invoice_DateTime
         {
-            get { return invoice_date;}
-            set { invoice_date = value; }
+            get { return invoice_DateTime;}
+            set { invoice_DateTime = value; }
         }
 
         public double Total
@@ -59,17 +57,11 @@ namespace MiniSupermarketApp.Models
             set { reason = value; }
         }
 
-        public bool Deleted
-        {
-            get { return deleted;}
-            set { deleted = value; }
-        }
-
         public override string ToString()
         {
             return id + " | " +
                 staff_id + " | " +
-                invoice_date + " | " +
+                invoice_DateTime + " | " +
                 total + " | " +
                 reason;
         }

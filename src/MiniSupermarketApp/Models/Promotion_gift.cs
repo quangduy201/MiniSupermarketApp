@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiniSupermarketApp.Models
 {
-    class Promotion_gift
+    public class Promotion_gift
     {
         int promotion_id;
         int product_id;

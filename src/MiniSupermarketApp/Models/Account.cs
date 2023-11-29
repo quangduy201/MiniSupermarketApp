@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiniSupermarketApp.Models
 {
-    class Account
+    public class Account
     {
         int id;
         string username;
@@ -14,13 +14,13 @@ namespace MiniSupermarketApp.Models
         int roleID;
         int staffID;
         DateTime last_signed_in;
-        bool deleted;
+        Boolean deleted;
 
         public Account()
         {
         }
 
-        public Account(int id, string username, string password, int roleID, int staffID, DateTime last_signed_in, bool deleted)
+        public Account(int id, string username, string password, int roleID, int staffID, DateTime last_signed_in, Boolean deleted)
         {
             this.id = id;
             this.username = username;
@@ -67,7 +67,7 @@ namespace MiniSupermarketApp.Models
             set { last_signed_in = value; }
         }
 
-        public bool Deleted
+        public Boolean Deleted
         {
             get { return deleted; }
             set { deleted = value; }

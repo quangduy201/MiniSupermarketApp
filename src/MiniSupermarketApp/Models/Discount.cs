@@ -6,27 +6,25 @@ using System.Threading.Tasks;
 
 namespace MiniSupermarketApp.Models
 {
-    class Discount
+    public class Discount
     {
         int id;
         double percent;
-        Date start_date;
-        Date end_date;
-        bool status;
-        bool deleted;
+        DateTime start_Date;
+        DateTime end_Date;
+        Boolean status;
 
         public Discount()
         {
         }
 
-        public Discount(int id, double percent, Date start_date, Date end_date, bool status, bool deleted)
+        public Discount(int id, double percent, DateTime start_Date, DateTime end_Date, Boolean status)
         {
             this.id = id;
             this.percent = percent;
-            this.start_date = start_date;
-            this.end_date = end_date;
+            this.start_Date = start_Date;
+            this.end_Date = end_Date;
             this.status = status;
-            this.deleted = deleted;
         }
 
         public int Id
@@ -41,28 +39,22 @@ namespace MiniSupermarketApp.Models
             set { percent = value; }
         }
 
-        public Date Start_date
+        public DateTime Start_DateTime
         {
-            get { return start_date; }
-            set { start_date = value; }
+            get { return start_Date; }
+            set { start_Date = value; }
         }
 
-        public Date End_date
+        public DateTime End_DateTime
         {
-            get { return end_date; }
-            set { end_date = value; }
+            get { return end_Date; }
+            set { end_Date = value; }
         }
 
-        public bool Status
+        public Boolean Status
         {
             get { return status; }
             set { status = value; }
-        }
-
-        public bool Deleted
-        {
-            get { return deleted; }
-            set { deleted = value; }
         }
 
         public override string ToString()
@@ -70,8 +62,8 @@ namespace MiniSupermarketApp.Models
             string status1 = status ? "Ngưng áp dụng" : "Đang áp dụng";
             return id + " | " +
                 percent + " | " +
-                start_date + " | " +
-                end_date + " | " +
+                start_Date + " | " +
+                end_Date + " | " +
                 status1;
         }
     }
